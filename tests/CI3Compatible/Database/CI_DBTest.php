@@ -38,6 +38,8 @@ class CI_DBTest extends DatabaseTestCase
 
     public function test_set_dbprefix()
     {
+        $this->ciDb->truncate();
+
         $dbprefix = $this->ciDb->set_dbprefix('ohprefix_');
         $this->assertSame('ohprefix_', $dbprefix);
     }
