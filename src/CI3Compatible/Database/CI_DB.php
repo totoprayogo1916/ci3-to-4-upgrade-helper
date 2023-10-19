@@ -40,7 +40,7 @@ class CI_DB extends CI_DB_query_builder
      *
      * @return string
      */
-    function set_dbprefix(string $prefix = ''): string
+    public function set_dbprefix(string $prefix = ''): string
     {
         return $this->db->setPrefix($prefix);
     }
@@ -50,7 +50,7 @@ class CI_DB extends CI_DB_query_builder
      *
      * @return string
      */
-    function dbprefix(string $table): string
+    public function dbprefix(string $table): string
     {
         return $this->db->prefixTable($table);
     }
@@ -60,7 +60,7 @@ class CI_DB extends CI_DB_query_builder
      *
      * @return string
      */
-    function protect_identifiers(string $table, bool $prefixSingle = false): string
+    public function protect_identifiers(string $table, bool $prefixSingle = false): string
     {
         return $this->db->protectIdentifiers($table, $prefixSingle);
     }
