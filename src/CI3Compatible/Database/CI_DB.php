@@ -37,28 +37,31 @@ class CI_DB extends CI_DB_query_builder
 
     /**
      * Set DB Prefix
-     * 
+     *
      * @return string
      */
-    function set_dbprefix(string $prefix = '') : string {
+    function set_dbprefix(string $prefix = ''): string
+    {
         return $this->db->setPrefix($prefix);
     }
 
     /**
      * Prepends a database prefix
-     * 
+     *
      * @return string
      */
-    function dbprefix(string $table) : string {
+    function dbprefix(string $table): string
+    {
         return $this->db->prefixTable($table);
     }
 
     /**
      * Protect Identifiers
-     * 
+     *
      * @return string
      */
-    function protect_identifiers(string $table, bool $prefixSingle = false) : string {
+    function protect_identifiers(string $table, bool $prefixSingle = false): string
+    {
         return $this->db->protectIdentifiers($table, $prefixSingle);
     }
 }

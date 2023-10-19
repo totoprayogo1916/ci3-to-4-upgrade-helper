@@ -36,13 +36,12 @@ class CI_DBTest extends DatabaseTestCase
         $this->assertSame(1, $row_count);
     }
 
-    function test_set_dbprefix() 
+    function test_set_dbprefix()
     {
         $dbprefix = $this->ciDb->set_dbprefix();
         $this->assertSame('', $dbprefix);
 
         $dbprefix = $this->ciDb->set_dbprefix('ohprefix_');
         $this->assertSame('ohprefix_', $dbprefix);
-
     }
 }
